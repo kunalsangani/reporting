@@ -1,0 +1,9 @@
+{% if latest_reports %}
+	<ul>
+		{% for r in latest_reports %}
+		<li><a href="/polls/{{ r.id }}/">{{ r.report_text }}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>No reports available</p>
+{% endif %}
